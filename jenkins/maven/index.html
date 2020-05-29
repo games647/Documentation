@@ -19,7 +19,7 @@
     
     
       
-        <title>Creating a Gradle Job - Documentation</title>
+        <title>Creating a Maven Job - Documentation</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-a-gradle-job" class="md-skip">
+        <a href="#creating-a-maven-job" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Creating a Gradle Job
+              Creating a Maven Job
             
           </span>
         </div>
@@ -176,7 +176,7 @@
     <li class="md-tabs__item">
       
         <a href="../" class="md-tabs__link md-tabs__link--active">
-          GitHub
+          Jenkins Docs
         </a>
       
     </li>
@@ -256,17 +256,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      GitHub
+      Jenkins Docs
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="GitHub" data-md-level="1">
+    <nav class="md-nav" aria-label="Jenkins Docs" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        GitHub
+        Jenkins Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -277,8 +277,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="GitHub" class="md-nav__link">
-      GitHub
+    <a href="../" title="Jenkins Docs" class="md-nav__link">
+      Jenkins Docs
     </a>
   </li>
 
@@ -299,6 +299,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../gradle/" title="Creating a Gradle Job" class="md-nav__link">
+      Creating a Gradle Job
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -310,14 +322,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Creating a Gradle Job
+        Creating a Maven Job
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Creating a Gradle Job" class="md-nav__link md-nav__link--active">
-      Creating a Gradle Job
+    <a href="./" title="Creating a Maven Job" class="md-nav__link md-nav__link--active">
+      Creating a Maven Job
     </a>
     
       
@@ -401,18 +413,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../maven/" title="Creating a Maven Job" class="md-nav__link">
-      Creating a Maven Job
-    </a>
   </li>
 
         
@@ -520,7 +520,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/CodeMC/Documentation/edit/master/docs/github/gradle.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/CodeMC/Documentation/edit/master/docs/jenkins/maven.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -528,18 +528,18 @@
                   
                 
                 
-                <h1 id="creating-a-gradle-job">Creating a Gradle Job<a class="headerlink" href="#creating-a-gradle-job" title="Permanent link">&para;</a></h1>
-<p>This page explains you step by step how to create a Build job on CodeMC for a Gradle Project.<br />
-For how to add a Maven project, check the <a href="../maven">Creating a Maven Job page</a>.</p>
+                <h1 id="creating-a-maven-job">Creating a Maven Job<a class="headerlink" href="#creating-a-maven-job" title="Permanent link">&para;</a></h1>
+<p>This page explains you step by step how to create a Build job on CodeMC for a Maven Project.<br />
+For how to add a Gradle project, check the <a href="../gradle">Creating a Gradle Job page</a>.</p>
 <h2 id="creating-the-job">Creating the Job<a class="headerlink" href="#creating-the-job" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>In order to create a job will you need to be added to the Site first, if you haven't already.<br />
-To get added, join the [Discord Server][Discord] and follow the instructions in the <code>#info</code> channel.</p>
+To get added, join the <a href="https://discord.gg/AGcFMu6">Discord Server</a> and follow the instructions in the <code>#info</code> channel.</p>
 </div>
 <ol>
 <li>Go to <a href="https://ci.codemc.io/view/Author/job/:user/newJob">https://ci.codemc.io/view/Author/job/:user/newJob</a> (Replace <code>:user</code> with your user/organisation name)</li>
-<li>Enter the job name in the top text box, and select <code>Freestyle project</code>. Click the <code>OK</code> button at the bottom of the page.</li>
+<li>Enter the job name in the top text box, and select <code>Maven project</code>. Click the <code>OK</code> button at the bottom of the page.</li>
 <li>Your job is now created! You should be redirected to the configuration page.</li>
 </ol>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
@@ -561,17 +561,18 @@ A tutorial for this can be found <a href="../github-integration#automatically-bu
 <p>It's recommendet to enable <code>Add timestamps to the Console Output</code></p>
 <h3 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Click on <code>Add build step</code></li>
-<li>Select <code>Invoke Gradle script</code></li>
-<li>Click on the <code>Use Gradle Wrapper</code> radio button.</li>
-<li>Click on <code>Make gradlew executable</code>.</li>
-<li>Insert your task into the task field. This is often something like <code>clean build</code></li>
+<li>Write the path to your pom.xml in the <code>Root POM</code> field.</li>
+<li>In the <code>Goals and options</code> field, set your default maven goals.<ul>
+<li>If you want to deploy the artifacts to the CodeMC repository will you need to follow the steps explained in the <a href="../../faq#how-can-i-deploy-my-maven-artefacts-to-the-codemc-repository">FAQ</a></li>
+</ul>
+</li>
 </ol>
 <h3 id="post-build-actions">Post-build Actions<a class="headerlink" href="#post-build-actions" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Click on the <code>Add post-build action</code> button.</li>
 <li>Select <code>Archive the artifacts</code>.</li>
-<li>In <code>Files to archive</code> specify the folder, where Gradle puts the build artifacts (Usually <code>**/build/libs/*.jar</code>)</li>
+<li>In <code>Files to archive</code> put <code>target/*.jar</code> (default build directory) or <code>**/target/*.jar</code> for multi-module projects.</li>
+<li>Click on the <code>Advanced</code> button and set <code>**/target/original-*.jar</code> in the <code>Exclusions</code> field.</li>
 </ol>
 <h2 id="finishing">Finishing<a class="headerlink" href="#finishing" title="Permanent link">&para;</a></h2>
 <ol>
@@ -597,7 +598,7 @@ A tutorial for this can be found <a href="../github-integration#automatically-bu
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../github-integration/" title="Integrating into GitHub" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../gradle/" title="Creating a Gradle Job" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -606,25 +607,11 @@ A tutorial for this can be found <a href="../github-integration#automatically-bu
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Integrating into GitHub
+                Creating a Gradle Job
               </div>
             </div>
           </a>
         
-        
-          <a href="../maven/" title="Creating a Maven Job" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Creating a Maven Job
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>
