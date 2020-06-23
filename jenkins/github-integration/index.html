@@ -15,7 +15,7 @@
         <meta name="author" content="Gabrielle C. & Andre_601">
       
       <link rel="shortcut icon" href="../../assets/img/CodeMCLogoV2.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a2408e81.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
       
@@ -57,6 +57,7 @@
     
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="blue">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -505,27 +506,45 @@ If you only want webhooks to be triggered for specific repositories, setup one f
 <ol>
 <li>Go to <a href="https://github.com/organizations/:organisation/settings/hooks">https://github.com/organizations/:organisation/settings/hooks</a> (Replace <code>:organisation</code> with the name of your organisation).</li>
 <li>Click <code>Add webhook</code></li>
-<li>Put <a href="https://ci.codemc.io/github-webhook">https://ci.codemc.io/github-webhook</a> as the Payload URL.</li>
-<li>Under <code>Which events would you like to trigger this webhook?</code> select <code>Let me select individual events</code> and enable the below options:<div class="admonition info">
+<li>Put <a href="https://ci.codemc.io/github-webhook/">https://ci.codemc.io/github-webhook/</a> as the Payload URL.</li>
+<li>
+<p>Under <code>Which events would you like to trigger this webhook?</code> select <code>Let me select individual events</code> and enable the below options:</p>
+<ul>
+<li><code>Pull requests</code></li>
+<li><code>Pushes</code></li>
+<li><code>Repositories</code></li>
+</ul>
+<div class="admonition info">
 <p class="admonition-title">Note</p>
 <p>You can also leave the setting on "Just the <code>push</code> event" if you only want pushes to trigger it</p>
 </div>
-</li>
+<ol>
 <li>Click <code>Add Webhook</code></li>
 <li>You're done!</li>
+</ol>
+</li>
 </ol>
 <h3 id="repositories">Repositories<a class="headerlink" href="#repositories" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Go to <a href="https://github.com/:user/:repo/settings/hooks">https://github.com/:user/:repo/settings/hooks</a> (Replace <code>:user</code> with your user/organisation name and <code>:repo</code> with the repository name).</li>
 <li>Click <code>Add webhook</code></li>
-<li>Put <a href="https://ci.codemc.io/github-webhook">https://ci.codemc.io/github-webhook</a> as the Payload URL.</li>
-<li>Under <code>Which events would you like to trigger this webhook?</code> select <code>Let me select individual events</code> and enable the below options:<div class="admonition info">
+<li>Put <a href="https://ci.codemc.io/github-webhook/">https://ci.codemc.io/github-webhook/</a> as the Payload URL.</li>
+<li>
+<p>Under <code>Which events would you like to trigger this webhook?</code> select <code>Let me select individual events</code> and enable the below options:</p>
+<ul>
+<li><code>Pull requests</code></li>
+<li><code>Pushes</code></li>
+<li><code>Repositories</code></li>
+</ul>
+<div class="admonition info">
 <p class="admonition-title">Note</p>
 <p>You can also leave the setting on "Just the <code>push</code> event" if you only want pushes to trigger it</p>
 </div>
-</li>
+<ol>
 <li>Click <code>Add Webhook</code></li>
 <li>You're done!</li>
+</ol>
+</li>
 </ol>
                 
               
@@ -621,14 +640,14 @@ If you only want webhooks to be triggered for specific repositories, setup one f
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
