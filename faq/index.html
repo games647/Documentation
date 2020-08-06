@@ -15,7 +15,7 @@
         <meta name="author" content="Gabrielle C. & Andre_601">
       
       <link rel="shortcut icon" href="../assets/img/CodeMCLogoV2.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.3">
     
     
       
@@ -23,9 +23,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.947af8d5.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7f672a1f.min.css">
       
       
         
@@ -272,6 +272,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-the-nms-maven-repository" class="md-nav__link">
+    What is the NMS Maven Repository?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-can-my-projecs-be-added-to-codemc" class="md-nav__link">
     How can my projec(s) be added to CodeMC?
   </a>
@@ -410,6 +417,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-the-nms-maven-repository" class="md-nav__link">
+    What is the NMS Maven Repository?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-can-my-projecs-be-added-to-codemc" class="md-nav__link">
     How can my projec(s) be added to CodeMC?
   </a>
@@ -459,6 +473,39 @@
                 
                 <h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
 <p>Commonly asked questions about CodeMC and related projects.</p>
+<h2 id="what-is-the-nms-maven-repository">What is the NMS Maven Repository?<a class="headerlink" href="#what-is-the-nms-maven-repository" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace <code>{version}</code> with whatever version you want to use.<br />
+The version has the same syntax as the version of the Spigot-API (e.g. <code>1.15.2-R0.1-SNAPSHOT</code>)</p>
+</div>
+<p>Add the following parts to your <code>pom.xml</code> when using Maven:<br />
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;repositories&gt;</span>
+    <span class="nt">&lt;repository&gt;</span>
+        <span class="nt">&lt;id&gt;</span>nms-repo<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;url&gt;</span>https://repo.codemc.io/repository/nms/<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/repositories&gt;</span>
+
+<span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.spigotmc<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>spigot<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>{version}<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;scope&gt;</span>provided<span class="nt">&lt;/scope&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div></p>
+<p>Add this to your <code>build.gradle</code> file when using Gradle.
+<div class="highlight"><pre><span></span><code><span class="n">repositories</span><span class="o">{</span>
+    <span class="n">maven</span><span class="o">{</span> <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://repo.codemc.io/repository/nms/&quot;</span> <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">dependencies</span><span class="o">{</span>
+    <span class="n">compileOnly</span><span class="o">(</span><span class="nl">group:</span> <span class="s1">&#39;org.spigotmc&#39;</span><span class="o">,</span> <span class="nl">name:</span> <span class="s1">&#39;spigot&#39;</span><span class="o">,</span> <span class="nl">version:</span> <span class="s1">&#39;{version}&#39;</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></p>
+<hr />
 <h2 id="how-can-my-projecs-be-added-to-codemc">How can my projec(s) be added to CodeMC?<a class="headerlink" href="#how-can-my-projecs-be-added-to-codemc" title="Permanent link">&para;</a></h2>
 <p>To get your project(s) added, join the <a href="">CodeMC Discord</a> and contact an Administrator.<br />
 When doing so, make sure to follow those basic guides:</p>
@@ -591,15 +638,15 @@ Ask a staff member on the <a href="">Discord</a> for support, when you're lost.<
       
     </div>
     
-      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.c3dc8c49.min.js"></script>
+      <script src="../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../assets/javascripts/worker/search.8e2cddea.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
