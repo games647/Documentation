@@ -154,6 +154,43 @@
       
       
         
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+    
+      
+    
+    <a href=".." class="md-tabs__link md-tabs__link--active">
+      Welcome
+    </a>
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../jenkins/" class="md-tabs__link">
+        Jenkins Docs
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -600,7 +637,7 @@ Ask a staff member on the <a href="https://discord.gg/AGcFMu6">Discord</a> for s
       <script>
         app = initialize({
           base: "..",
-          features: ['tabs'],
+          features: ['navigation.tabs'],
           search: Object.assign({
             worker: "../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
