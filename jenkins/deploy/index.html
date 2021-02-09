@@ -590,43 +590,43 @@ Common examples to use are <code>ORG_GRADLE_PROJECT_mavenUsername</code> and <co
 <p class="admonition-title">Gradle</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1"><span class="twemoji"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gradle icon</title><path d="M22.695 4.297a3.807 3.807 0 0 0-5.29-.09.368.368 0 0 0 0 .533l.46.47a.363.363 0 0 0 .474.032 2.182 2.182 0 0 1 2.86 3.291c-3.023 3.02-7.056-5.447-16.211-1.083a1.24 1.24 0 0 0-.534 1.745l1.571 2.713a1.238 1.238 0 0 0 1.681.461l.037-.02-.029.02.688-.384a16.083 16.083 0 0 0 2.193-1.635.384.384 0 0 1 .499-.016.357.357 0 0 1 .016.534 16.435 16.435 0 0 1-2.316 1.741H8.77l-.696.39a1.958 1.958 0 0 1-.963.25 1.987 1.987 0 0 1-1.726-.989L3.9 9.696C1.06 11.72-.686 15.603.26 20.522a.363.363 0 0 0 .354.296h1.675a.363.363 0 0 0 .37-.331 2.478 2.478 0 0 1 4.915 0 .36.36 0 0 0 .357.317h1.638a.363.363 0 0 0 .357-.317 2.478 2.478 0 0 1 4.914 0 .363.363 0 0 0 .358.317h1.627a.363.363 0 0 0 .363-.357c.037-2.294.656-4.93 2.42-6.25 6.108-4.57 4.502-8.486 3.088-9.9zm-6.229 6.901l-1.165-.584a.73.73 0 1 1 1.165.587z"/></svg></span> build.gradle</label><div class="tabbed-content">
 <p><a href="https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:complete_example"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 121.941V128H256V0h6.059c6.365 0 12.47 2.529 16.971 7.029l97.941 97.941A24.005 24.005 0 01384 121.941zM248 160c-13.2 0-24-10.8-24-24V0H24C10.745 0 0 10.745 0 24v464c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24V160H248zM123.206 400.505a5.4 5.4 0 01-7.633.246l-64.866-60.812a5.4 5.4 0 010-7.879l64.866-60.812a5.4 5.4 0 017.633.246l19.579 20.885a5.4 5.4 0 01-.372 7.747L101.65 336l40.763 35.874a5.4 5.4 0 01.372 7.747l-19.579 20.884zm51.295 50.479l-27.453-7.97a5.402 5.402 0 01-3.681-6.692l61.44-211.626a5.402 5.402 0 016.692-3.681l27.452 7.97a5.4 5.4 0 013.68 6.692l-61.44 211.626a5.397 5.397 0 01-6.69 3.681zm160.792-111.045l-64.866 60.812a5.4 5.4 0 01-7.633-.246l-19.58-20.885a5.4 5.4 0 01.372-7.747L284.35 336l-40.763-35.874a5.4 5.4 0 01-.372-7.747l19.58-20.885a5.4 5.4 0 017.633-.246l64.866 60.812a5.4 5.4 0 01-.001 7.879z"/></svg></span> Source</a><br />
-<div class="highlight"><pre><span></span><code>plugins {
-    id &#39;maven-publish&#39;
-}
+<div class="highlight"><pre><span></span><code><span class="n">plugins</span> <span class="o">{</span>
+    <span class="n">id</span> <span class="s1">&#39;maven-publish&#39;</span>
+<span class="o">}</span>
 
-group = &quot;your.project.group&quot;
-version = &quot;1.0.0&quot;
+<span class="n">group</span> <span class="o">=</span> <span class="s2">&quot;your.project.group&quot;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;1.0.0&quot;</span>
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId = group
-            artifactId = &quot;YourArtifactName&quot;
-            version = project.version
+<span class="n">publishing</span> <span class="o">{</span>
+    <span class="n">publications</span> <span class="o">{</span>
+        <span class="n">mavenJava</span><span class="o">(</span><span class="n">MavenPublication</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">groupId</span> <span class="o">=</span> <span class="n">group</span>
+            <span class="n">artifactId</span> <span class="o">=</span> <span class="s2">&quot;YourArtifactName&quot;</span>
+            <span class="n">version</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="na">version</span>
 
-            from components.java
-        }
-    }
+            <span class="n">from</span> <span class="n">components</span><span class="o">.</span><span class="na">java</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 
-    repositories {
-        maven {
-            def snapshotUrl = &quot;https://repo.codemc.io/repository/maven-snapshots/&quot;
-            def releaseUrl = &quot;https://repo.codemc.io/repository/maven-releases/&quot;
+    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="n">maven</span> <span class="o">{</span>
+            <span class="kt">def</span> <span class="n">snapshotUrl</span> <span class="o">=</span> <span class="s2">&quot;https://repo.codemc.io/repository/maven-snapshots/&quot;</span>
+            <span class="kt">def</span> <span class="n">releaseUrl</span> <span class="o">=</span> <span class="s2">&quot;https://repo.codemc.io/repository/maven-releases/&quot;</span>
 
-            url = project.version.endsWith(&quot;SNAPSHOT&quot;) ? snapshotUrl : releaseUrl
+            <span class="n">url</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="na">version</span><span class="o">.</span><span class="na">endsWith</span><span class="o">(</span><span class="s2">&quot;SNAPSHOT&quot;</span><span class="o">)</span> <span class="o">?</span> <span class="n">snapshotUrl</span> <span class="o">:</span> <span class="n">releaseUrl</span>
 
-            def mavenUsername = System.getenv(&quot;ORG_GRADLE_PROJECT_mavenUsername&quot;) ? System.getenv(&quot;ORG_GRADLE_PROJECT_mavenUsername&quot;) : null
-            def mavenPassword = System.getenv(&quot;ORG_GRADLE_PROJECT_mavenPassword&quot;) ? System.getenv(&quot;ORG_GRADLE_PROJECT_mavenPassword&quot;) : null
+            <span class="kt">def</span> <span class="n">mavenUsername</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&quot;ORG_GRADLE_PROJECT_mavenUsername&quot;</span><span class="o">)</span> <span class="o">?</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&quot;ORG_GRADLE_PROJECT_mavenUsername&quot;</span><span class="o">)</span> <span class="o">:</span> <span class="kc">null</span>
+            <span class="kt">def</span> <span class="n">mavenPassword</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&quot;ORG_GRADLE_PROJECT_mavenPassword&quot;</span><span class="o">)</span> <span class="o">?</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&quot;ORG_GRADLE_PROJECT_mavenPassword&quot;</span><span class="o">)</span> <span class="o">:</span> <span class="kc">null</span>
 
-            if(mavenUsername != null &amp;&amp; mavenPassword != null) {
-                credentials {
-                    username = mavenUsername
-                    password = mavenPassword
-                }
-            }
-        }
-    }
-}
+            <span class="k">if</span><span class="o">(</span><span class="n">mavenUsername</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">mavenPassword</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">credentials</span> <span class="o">{</span>
+                    <span class="n">username</span> <span class="o">=</span> <span class="n">mavenUsername</span>
+                    <span class="n">password</span> <span class="o">=</span> <span class="n">mavenPassword</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></p>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2"><span class="twemoji"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Kotlin icon</title><path d="M0 24V13.848L13.505 0H24L0 24zM0 0v12.672L12.05 0H0zm1.335 24H24L12.699 12.618 1.335 24z"/></svg></span> build.gradle.kts</label><div class="tabbed-content">
