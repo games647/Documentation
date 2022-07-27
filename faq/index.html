@@ -347,6 +347,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-build-a-jdk-8-maven-project" class="md-nav__link">
+    How to build a JDK 8 Maven project?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -520,6 +527,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-build-a-jdk-8-maven-project" class="md-nav__link">
+    How to build a JDK 8 Maven project?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -587,6 +601,12 @@ To check this, head over to your <a href="https://github.com/settings/applicatio
 <hr />
 <h2 id="how-can-i-deploy-my-maven-artifacts-to-the-codemc-repository">How can I deploy my maven artifacts to the CodeMC repository?<a class="headerlink" href="#how-can-i-deploy-my-maven-artifacts-to-the-codemc-repository" title="Permanent link">&para;</a></h2>
 <p>You can read about the requirements and general process in the <a href="../jenkins/deploy/">Deploy to the CodeMC Nexus</a> page.</p>
+<hr />
+<h2 id="how-to-build-a-jdk-8-maven-project">How to build a JDK 8 Maven project?<a class="headerlink" href="#how-to-build-a-jdk-8-maven-project" title="Permanent link">&para;</a></h2>
+<p>Jenkins dropped the official support for JDK 8 Maven builds, the following workaround is required:
+- Set the JDK version to JDK 11
+- Add the following maven goal to the commandline:
+<code>io.codemc.maven.plugins.toolchain:codemc-toolchain-selector:0.0.2-SNAPSHOT:select</code></p>
 
               
             </article>
